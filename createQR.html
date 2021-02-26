@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="ml-2 col-sm-6">
+                <?php if(isset($frm_link) and $frm_link!=""){?>
+                <div class="alert alert-success">QR created for <strong>[<?php echo $frm_link;?>]</strong></div>
+                <div class="text-center"><img src="<?php echo $set_qr_code_path.basename($filename); ?>" /></div>
+                <?php } ?>
+                <form method="post" action="createqr.php">
+                    <div class="form-group">
+                        <label>Student code</label>
+                        <input type="text" name="frm_qr" id="frm_qr" class="form-control" placeholder="Student code" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email_qr" id="email_qr" class="form-control" placeholder="Email" required>
+                    </div>
+                <!-- <div class="form-group">
+                <label>QR Code Level</label>
+                <select name="level" class="form-control">
+                <option value="L">L - smallest</option>
+                <option value="M" selected>M</option>
+                <option value="Q">Q</option>
+                <option value="H">H - best</option>
+                </select>
+                </div> -->
+                <!-- <div class="form-group">
+                <label>QR Code Size</label>
+                <select name="size" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                </select>
+                </div> -->
+                <div class="form-group">
+                <input type="submit" name="submit" value="Upload" class="btn btn-danger">
+                </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
