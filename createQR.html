@@ -10,7 +10,7 @@
                 <div class="alert alert-success">QR created for <strong>[<?php echo $frm_link;?>]</strong></div>
                 <div class="text-center"><img src="<?php echo $set_qr_code_path.basename($filename); ?>" /></div>
                 <?php } ?>
-                <form method="post" action="createqr.php">
+                <form method="post" action="/createqr.php">
                     <div class="form-group">
                         <label>Student code</label>
                         <input type="text" name="frm_qr" id="frm_qr" class="form-control" placeholder="Student code" required>
