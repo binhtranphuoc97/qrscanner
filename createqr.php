@@ -2,7 +2,6 @@
     include('./library/php_qr_code/qrlib.php'); // Include a library for PHP QR code
 
     if(isset($_REQUEST['submit']) and $_REQUEST['submit']!=""){
-
         //its a location where generated QR code can be stored.
         $qr_code_file_path = dirname(__FILE__).DIRECTORY_SEPARATOR.'qr_assets'.DIRECTORY_SEPARATOR;
         $set_qr_code_path = 'qr_assets/';
